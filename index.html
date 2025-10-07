@@ -294,27 +294,5 @@
 <p class="p58"><span class="s1"></span><br></p>
 <p class="p59"><span class="s1">Falar no WhatsApp</span></p>
 <p class="p26"><span class="s1"></span><br></p>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Seleciona todos os elementos que parecem botões
-  var buttons = document.querySelectorAll('.button, .btn, [onclick]');
-
-  buttons.forEach(function(el){
-    // Adiciona evento click padrão
-    el.addEventListener('click', function(e){
-      if(typeof el.onclick === 'function') el.onclick();
-    });
-
-    // Adiciona evento touchstart para iOS/Safari
-    el.addEventListener('touchstart', function(e){
-      if(typeof el.onclick === 'function') el.onclick();
-    });
-
-    // Garante acessibilidade para Safari
-    if(!el.hasAttribute('role')) el.setAttribute('role', 'button');
-    if(!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '0');
-  });
-});
-</script>
 </body>
 </html>
